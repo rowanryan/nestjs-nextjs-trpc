@@ -1,4 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const { join } = require("path");
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    experimental: {
+        outputFileTracingRoot: join(__dirname, "../../../.."),
+    },
+};
+
+module.exports = nextConfig;
